@@ -1,0 +1,513 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+.hero {
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: gold;
+  color: black;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.hall-list {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hall-card {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.hall-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+form {
+  background: white;
+  padding: 25px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.admin-section {
+  padding: 30px;
+  text-align: center;
+}
+
+table {
+  width: 95%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background: black;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 12px;
+  background: #222;
+  color: white;
+  margin-top: 30px;
+}
+
+.about, .hall-preview {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 12px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+.details-btn {
+  background: navy;
+}
+
+.details-btn:hover {
+  background: darkblue;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  width: 80%;
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+
+.print-btn {
+  background: green;
+}
+
+.print-btn:hover {
+  background: darkgreen;
+  color: white;
+}
+
+.contact-box {
+  background: white;
+  padding: 30px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.contact-box a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-box a:hover {
+  color: red;
+}
+
+.approve {
+  background: green;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.reject {
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.payment-box, .review-box {
+  background: white;
+  padding: 30px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.checkbox-line {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.qr-img {
+  width: 200px;
+  border-radius: 10px;
+  margin: 15px 0;
+  border: 2px solid black;
+}
+
+.chatbot {
+  background: white;
+  padding: 25px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+
+.chat-box {
+  background: #f1f1f1;
+  height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.chat-msg {
+  padding: 8px;
+  margin: 6px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.user-msg {
+  background: black;
+  color: white;
+}
+
+.bot-msg {
+  background: gold;
+  color: black;
+}
+
+.chart-section {
+  background: white;
+  padding: 25px;
+  margin: 30px auto;
+  width: 90%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+}
+.invitation-card {
+  background: white;
+  width: 80%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  border: 4px solid gold;
+}
+
+.invitation-card h2 {
+  font-size: 28px;
+  color: darkred;
+}
+
+.invitation-card p {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.inv-footer {
+  margin-top: 20px;
+  font-size: 20px;
+  color: green;
+}
+.ticket-card {
+  background: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  border: 3px dashed black;
+}
+
+.ticket-card h2 {
+  font-size: 28px;
+  color: darkblue;
+  margin-bottom: 15px;
+}
+
+.ticket-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.ticket-note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+.hero {
+  background: url("./images/hall1.jpg") center/cover no-repeat;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.hero-content h2 {
+  font-size: 32px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.btn2 {
+  background: orange;
+}
+
+.search-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.search-section input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+.popular-halls {
+  padding: 30px;
+  text-align: center;
+}
+
+.hall-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hall-card {
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+}
+
+.hall-card img {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+}
+
+.features {
+  padding: 30px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature-card {
+  width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.steps {
+  padding: 30px;
+  text-align: center;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step-card {
+  width: 200px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}

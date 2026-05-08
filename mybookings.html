@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadUserBookings()">
+
+<header>
+  <h1>My Booking History</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./recommend.html">Recommend Hall</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./contact.html">Contact</a>
+    <a href="#" onclick="logoutUser()">Logout</a>
+  </nav>
+</header>
+
+<section class="admin-section">
+  <h2>Your Bookings</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Hall</th>
+        <th>Date</th>
+        <th>Slot</th>
+        <th>Layout</th>
+        <th>Days</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Payment</th>
+        <th>Refund</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="userBookingList"></tbody>
+  </table>
+</section>
+
+<section class="review-box">
+  <h2>Submit Review</h2>
+
+  <select id="reviewHall">
+    <option value="">Select Hall</option>
+    <option value="Royal Palace Hall">Royal Palace Hall</option>
+    <option value="Golden Party Hall">Golden Party Hall</option>
+    <option value="Budget Celebration Hall">Budget Celebration Hall</option>
+  </select>
+
+  <select id="reviewRating">
+    <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+    <option value="4">⭐⭐⭐⭐ (4)</option>
+    <option value="3">⭐⭐⭐ (3)</option>
+    <option value="2">⭐⭐ (2)</option>
+    <option value="1">⭐ (1)</option>
+  </select>
+
+  <textarea id="reviewText" placeholder="Write your review..."></textarea>
+
+  <button class="btn" onclick="submitReview()">Submit Review</button>
+
+  <p id="reviewMsg"></p>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

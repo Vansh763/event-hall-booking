@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Halls</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Available Event Halls</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./signup.html">Signup</a>
+    <a href="./login.html">Login</a>
+    <a href="./admin-login.html">Admin</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="filter-section">
+  <input type="text" id="searchHall" placeholder="Search hall name..." onkeyup="searchHalls()">
+
+  <select id="priceFilter" onchange="filterHalls()">
+    <option value="all">Filter by Price</option>
+    <option value="15000">Below ₹20,000</option>
+    <option value="30000">Below ₹40,000</option>
+    <option value="50000">Above ₹40,000</option>
+  </select>
+
+  <select id="capacityFilter" onchange="filterHalls()">
+    <option value="all">Filter by Capacity</option>
+    <option value="200">200+</option>
+    <option value="300">300+</option>
+    <option value="500">500+</option>
+  </select>
+</section>
+
+<section class="hall-list" id="hallContainer">
+
+  <div class="hall-card" data-price="50000" data-capacity="500">
+    <img src="images/hall1.jpg" alt="Royal Palace Hall">
+    <h2>Royal Palace Hall</h2>
+    <p><b>Capacity:</b> 500 People</p>
+    <p><b>Price:</b> ₹50,000 / Day</p>
+
+    <button class="btn" onclick="selectHall('Royal Palace Hall',50000)">Book Now</button>
+    <button class="btn details-btn"
+      onclick="showDetails('Royal Palace Hall','500 People','₹50,000 / Day','AC, Parking, Decoration, DJ System','images/hall1.jpg')">
+      View Details
+    </button>
+  </div>
+
+  <div class="hall-card" data-price="30000" data-capacity="300">
+    <img src="images/hall2.jpg" alt="Golden Party Hall">
+    <h2>Golden Party Hall</h2>
+    <p><b>Capacity:</b> 300 People</p>
+    <p><b>Price:</b> ₹30,000 / Day</p>
+
+    <button class="btn" onclick="selectHall('Golden Party Hall',30000)">Book Now</button>
+    <button class="btn details-btn"
+      onclick="showDetails('Golden Party Hall','300 People','₹30,000 / Day','AC, Decoration, Lighting, Stage','images/hall2.jpg')">
+      View Details
+    </button>
+  </div>
+
+  <div class="hall-card" data-price="15000" data-capacity="200">
+    <img src="images/hall3.jpg" alt="Budget Celebration Hall">
+    <h2>Budget Celebration Hall</h2>
+    <p><b>Capacity:</b> 200 People</p>
+    <p><b>Price:</b> ₹15,000 / Day</p>
+
+    <button class="btn" onclick="selectHall('Budget Celebration Hall',15000)">Book Now</button>
+    <button class="btn details-btn"
+      onclick="showDetails('Budget Celebration Hall','200 People','₹15,000 / Day','Parking, Basic Decoration, Lights','images/hall3.jpg')">
+      View Details
+    </button>
+  </div>
+
+</section>
+
+<div id="hallModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <img id="modalImg" src="" alt="Hall Image">
+
+    <h2 id="modalName"></h2>
+    <p id="modalCapacity"></p>
+    <p id="modalPrice"></p>
+    <p id="modalFacilities"></p>
+
+    <button class="btn" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

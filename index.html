@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Event Hall Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Online Event Hall Booking</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./signup.html">Signup</a>
+    <a href="./login.html">Login</a>
+    <a href="./admin-login.html">Admin</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Book Your Dream Event Hall Online</h2>
+    <p>Wedding | Birthday | Corporate | Party | Engagement</p>
+    <a href="./halls.html" class="btn">Explore Halls</a>
+    <a href="./booking.html" class="btn btn2">Book Now</a>
+  </div>
+</section>
+
+<section class="search-section">
+  <h2>Search Best Hall</h2>
+  <input type="text" id="searchHall" placeholder="Search hall name...">
+  <button class="btn" onclick="searchHall()">Search</button>
+  <p id="searchResult"></p>
+</section>
+
+<section class="popular-halls">
+  <h2>Popular Halls</h2>
+
+  <div class="hall-container">
+    <div class="hall-card">
+      <img src="./images/hall1.jpg" alt="Hall">
+      <h3>Royal Palace Hall</h3>
+      <p>Capacity: 500 People</p>
+      <p>Price: ₹50,000/day</p>
+      <button class="btn" onclick="selectHall('Royal Palace Hall', 50000)">Book Now</button>
+    </div>
+
+    <div class="hall-card">
+      <img src="./images/hall2.jpg" alt="Hall">
+      <h3>Golden Party Hall</h3>
+      <p>Capacity: 300 People</p>
+      <p>Price: ₹30,000/day</p>
+      <button class="btn" onclick="selectHall('Golden Party Hall', 30000)">Book Now</button>
+    </div>
+
+    <div class="hall-card">
+      <img src="./images/hall3.jpg" alt="Hall">
+      <h3>Budget Celebration Hall</h3>
+      <p>Capacity: 200 People</p>
+      <p>Price: ₹15,000/day</p>
+      <button class="btn" onclick="selectHall('Budget Celebration Hall', 15000)">Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <h2>Why Choose Us?</h2>
+
+  <div class="feature-container">
+    <div class="feature-card">
+      <h3>Easy Booking</h3>
+      <p>Book halls within 2 minutes using online booking system.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Secure Payment</h3>
+      <p>UPI, Cash & Card payment options available (Demo).</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Digital Ticket</h3>
+      <p>Get entry pass with QR ticket after successful booking.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Admin Dashboard</h3>
+      <p>Admin can approve, reject bookings and view analytics charts.</p>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <h2>How It Works?</h2>
+
+  <div class="step-container">
+    <div class="step-card">
+      <h3>Step 1</h3>
+      <p>Signup/Login your account</p>
+    </div>
+
+    <div class="step-card">
+      <h3>Step 2</h3>
+      <p>Select your hall & choose date</p>
+    </div>
+
+    <div class="step-card">
+      <h3>Step 3</h3>
+      <p>Make payment & confirm booking</p>
+    </div>
+
+    <div class="step-card">
+      <h3>Step 4</h3>
+      <p>Download ticket & enjoy event</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management | Designed by Vansh</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  function searchHall() {
+    let input = document.getElementById("searchHall").value.toLowerCase();
+    let result = document.getElementById("searchResult");
+
+    if (input.includes("royal")) {
+      result.innerHTML = "✅ Found: Royal Palace Hall (₹50,000/day)";
+    } else if (input.includes("golden")) {
+      result.innerHTML = "✅ Found: Golden Party Hall (₹30,000/day)";
+    } else if (input.includes("budget")) {
+      result.innerHTML = "✅ Found: Budget Celebration Hall (₹15,000/day)";
+    } else {
+      result.innerHTML = "❌ No hall found. Try: Royal, Golden, Budget";
+    }
+  }
+</script>
+
+</body>
+</html>

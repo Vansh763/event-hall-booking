@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./recommend.html">Recommend Hall</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./admin-login.html">Admin</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-box">
+  <h2>Event Owner Details</h2>
+
+  <p><b>Owner Name:</b> Vansh Kumar</p>
+
+  <p><b>Mobile:</b>
+    <a href="tel:+917012345678">+91 70123 45678</a>
+  </p>
+
+  <p><b>Email:</b>
+    <a href="mailto:vanshevent@gmail.com">vanshevent@gmail.com</a>
+  </p>
+
+  <p><b>Location:</b> Jaipur, Rajasthan</p>
+
+  <iframe
+    src="https://www.google.com/maps?q=Jaipur%20Rajasthan&output=embed"
+    width="100%" height="250"
+    style="border:0; border-radius:10px;"
+    allowfullscreen="" loading="lazy">
+  </iframe>
+</section>
+
+<section class="chatbot">
+  <h2>AI Chatbot Support (Demo)</h2>
+
+  <div id="chatBox" class="chat-box"></div>
+
+  <input type="text" id="chatInput" placeholder="Type your message...">
+  <button class="btn" onclick="sendAIChat()">Send</button>
+</section>
+
+<section class="form-section">
+  <h2>Feedback Form</h2>
+
+  <form id="feedbackForm" onsubmit="submitFeedback(event)">
+    <label>Your Name</label>
+    <input type="text" id="fbName" required>
+
+    <label>Your Email</label>
+    <input type="email" id="fbEmail" required>
+
+    <label>Your Feedback</label>
+    <textarea id="fbMessage" required></textarea>
+
+    <button class="btn" type="submit">Submit Feedback</button>
+  </form>
+
+  <p id="fbMsg"></p>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

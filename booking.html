@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Hall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkUserLogin()">
+
+<header>
+  <h1>Hall Booking Form</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./signup.html">Signup</a>
+    <a href="./login.html">Login</a>
+    <a href="./admin-login.html">Admin</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="form-section">
+  <form id="bookingForm">
+
+    <label>Full Name</label>
+    <input type="text" id="name" required>
+
+    <label>Mobile Number</label>
+    <input type="text" id="mobile" required>
+
+    <label>Select Hall</label>
+    <select id="hall" required onchange="updatePrice()">
+      <option value="">--Select--</option>
+    </select>
+
+    <label>Hall Layout</label>
+    <select id="layout" required onchange="updatePrice()">
+      <option value="Wedding">Wedding Setup (+₹10000)</option>
+      <option value="Birthday">Birthday Setup (+₹5000)</option>
+      <option value="Corporate">Corporate Setup (+₹8000)</option>
+    </select>
+
+    <label>Booking Slot</label>
+    <select id="slot" required onchange="updatePrice()">
+      <option value="Morning">Morning (9AM - 3PM)</option>
+      <option value="Evening">Evening (4PM - 10PM)</option>
+      <option value="Full Day">Full Day</option>
+    </select>
+
+    <label>Event Date</label>
+    <input type="date" id="date" required>
+
+    <label>Total Days</label>
+    <input type="number" id="days" min="1" value="1" required oninput="updatePrice()">
+
+    <label>Total Price</label>
+    <input type="text" id="totalPrice" readonly>
+
+    <label class="checkbox-line">
+      <input type="checkbox" id="termsCheck" required>
+      I agree to Terms & Conditions
+    </label>
+
+    <button class="btn" type="submit">Proceed to Payment</button>
+
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

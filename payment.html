@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadPaymentDetails()">
+
+<header>
+  <h1>Payment Page</h1>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="payment-box">
+  <h2>Confirm Payment</h2>
+
+  <p><b>Booking ID:</b> <span id="payBookingId"></span></p>
+  <p><b>Hall Name:</b> <span id="payHall"></span></p>
+  <p><b>Layout:</b> <span id="payLayout"></span></p>
+  <p><b>Slot:</b> <span id="paySlot"></span></p>
+  <p><b>Total Amount:</b> <span id="payAmount"></span></p>
+
+  <h3>Scan UPI QR Code (Demo)</h3>
+  <img src="./images/qr.png" class="qr-img" alt="QR Code">
+
+  <h3>Select Payment Method</h3>
+
+  <select id="paymentMethod">
+    <option value="UPI">UPI</option>
+    <option value="Card">Debit/Credit Card</option>
+    <option value="Cash">Cash (Pay at Venue)</option>
+  </select>
+
+  <br><br>
+
+  <button class="btn" onclick="confirmPayment()">Pay Now</button>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

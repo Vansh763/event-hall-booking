@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onload="checkAdmin(); loadAdminDashboard(); loadFeedbacks();">
+
+<header>
+  <h1>Admin Dashboard</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./contact.html">Contact</a>
+    <a href="#" onclick="logoutAdmin()">Logout</a>
+  </nav>
+</header>
+
+<section class="admin-section">
+  <h2>Dashboard Summary</h2>
+  <h3 id="totalBookings"></h3>
+  <h3 id="totalRevenue"></h3>
+</section>
+
+<section class="chart-section">
+  <h2>Analytics Charts</h2>
+
+  <canvas id="revenueChart"></canvas>
+  <br><br>
+  <canvas id="hallChart"></canvas>
+</section>
+
+<section class="form-section">
+  <form onsubmit="addHall(event)">
+    <h2>Add New Hall</h2>
+
+    <label>Hall Name</label>
+    <input type="text" id="newHallName" required>
+
+    <label>Capacity</label>
+    <input type="number" id="newHallCapacity" required>
+
+    <label>Price Per Day</label>
+    <input type="number" id="newHallPrice" required>
+
+    <label>Image URL (optional)</label>
+    <input type="text" id="newHallImg">
+
+    <button class="btn" type="submit">Add Hall</button>
+  </form>
+</section>
+
+<section class="admin-section">
+  <h2>All Bookings</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Hall</th>
+        <th>Date</th>
+        <th>Slot</th>
+        <th>Layout</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Payment</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="bookingList"></tbody>
+  </table>
+</section>
+
+<section class="admin-section">
+  <h2>User Feedbacks</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+
+    <tbody id="feedbackList"></tbody>
+  </table>
+</section>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

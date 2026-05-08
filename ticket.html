@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Entry Pass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTicket()">
+
+<header>
+  <h1>Digital Event Entry Pass</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="ticket-card" id="ticketCard">
+  <h2>ENTRY PASS</h2>
+
+  <p><b>Booking ID:</b> <span id="tBookingId"></span></p>
+  <p><b>Name:</b> <span id="tName"></span></p>
+  <p><b>Hall:</b> <span id="tHall"></span></p>
+  <p><b>Date:</b> <span id="tDate"></span></p>
+  <p><b>Slot:</b> <span id="tSlot"></span></p>
+  <p><b>Layout:</b> <span id="tLayout"></span></p>
+
+  <h3>QR Code (Demo)</h3>
+  <img src="./images/ticketqr.png" class="qr-img" alt="Ticket QR">
+
+  <p class="ticket-note">Show this pass at entry gate</p>
+</section>
+
+<div style="text-align:center;">
+  <button class="btn" onclick="window.print()">Download / Print Ticket</button>
+</div>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

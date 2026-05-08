@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadInvitationCard()">
+
+<header>
+  <h1>Digital Invitation Card</h1>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./halls.html">Halls</a>
+    <a href="./booking.html">Book Now</a>
+    <a href="./mybookings.html">My Bookings</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="invitation-card" id="invitationCard">
+  <h2>You're Invited!</h2>
+  <p id="invEvent"></p>
+  <p id="invName"></p>
+  <p id="invHall"></p>
+  <p id="invDate"></p>
+  <p id="invSlot"></p>
+  <p class="inv-footer">Thank You!</p>
+</section>
+
+<div style="text-align:center;">
+  <button class="btn" onclick="window.print()">Download / Print Invitation</button>
+</div>
+
+<footer>
+  <p>© 2026 Online Event Hall Booking Management</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
